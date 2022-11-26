@@ -11,9 +11,14 @@
 }
 
 :root {
-  --primary-color: #2e2e2e;
-  --primary-background-color: #dddfe9;
+  --primary-color: black; // #2e2e2e;
+  --primary-background-color: white; // #dddfe9;
 }
+
+// :root {
+//   --primary-color: #eff4fc; // #2e2e2e;
+//   --primary-background-color: #1e1e1e; // #dddfe9;
+// }
 
 * {
   margin: 0;
@@ -42,13 +47,24 @@ a {
 }
 
 .artBox {
+  // display: none;
   width: 600px;
   height: 600px;
+  z-index: 100;
   position: fixed;
 
   transform: scale(0.75);
 
   background: url("../public/art.png");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sigvar-Serial", "Segoe UI", "Helvetica Neue", "sans-serif";
 }
 
 // Browser preffered color schemes
