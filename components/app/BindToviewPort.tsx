@@ -1,10 +1,12 @@
 import styles from "./BindToViewPort.module.scss";
 
-export default function BindToViewPort({
+import type { CSSProperties } from "react";
+
+function BindToViewPort({
   style,
   children,
 }: {
-  style?: object;
+  style?: CSSProperties;
   children: React.ReactNode;
 }) {
   // Component to consume the full width & height of the window
@@ -15,3 +17,20 @@ export default function BindToViewPort({
     </div>
   );
 }
+
+function BTVP_BottomSection({
+  style,
+  children,
+}: {
+  style?: object;
+  children: React.ReactNode;
+}) {
+  return (
+    <div style={style} className={styles.BottomSection}>
+      {children}
+    </div>
+  );
+}
+
+export { BindToViewPort, BTVP_BottomSection };
+export default BindToViewPort;

@@ -4,19 +4,20 @@
   font-display: swap;
   font-family: "Sigvar-Serial";
   src: url("../public/fonts/Sigvar-Serial-Bold.eot");
-  src: url("../public/fonts/Sigvar-Serial-Bold.eot?#iefix")
-      format("embedded-opentype"),
+  src: url("../public/fonts/Sigvar-Serial-Bold.eot") format("embedded-opentype"),
     url("../public/fonts/Sigvar-Serial-Bold.woff2") format("woff2"),
     url("../public/fonts/Sigvar-Serial-Bold.woff") format("woff"),
     url("../public/fonts/Sigvar-Serial-Bold.ttf") format("truetype");
 }
 
 :root {
-  --primary-color: #000000;
-  --primary-background-color: #ffffff;
+  --primary-color: #2e2e2e;
+  --primary-background-color: #dddfe9;
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -27,8 +28,12 @@ body {
 
   color: var(--primary-color);
   background-color: var(--primary-background-color);
+  // background: url("../public/media/background.jpg");
+  // background-size: cover;
+  // background-repeat: no-repeat;
 
-  font-family: "Sigvar-Serial", "-apple-system", "Segoe UI", "sans-serif";
+  // font-family: "Sigvar-Serial", "-apple-system", "Segoe UI", "sans-serif";
+  font-family: "Segoe UI", "Helvetica Neue", "sans-serif";
 }
 
 a {
@@ -36,14 +41,14 @@ a {
   text-decoration: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
+.artBox {
+  width: 600px;
+  height: 600px;
+  position: fixed;
+
+  transform: scale(0.75);
+
+  background: url("../public/art.png");
 }
 
 // Browser preffered color schemes

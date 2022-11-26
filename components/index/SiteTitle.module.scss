@@ -1,0 +1,38 @@
+.main {
+  position: relative;
+
+  text-transform: capitalize;
+
+  h1 {
+    font-size: 120px;
+    line-height: 110px;
+    font-style: italic;
+    font-family: "Sigvar-Serial";
+  }
+
+  label {
+    width: 100%;
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 19px;
+    font-weight: 600;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+  }
+
+  span {
+    top: 50%;
+    width: 170px;
+    height: 2px;
+    position: absolute;
+
+    margin: 10px 0;
+
+    opacity: 0.5;
+    background-color: var(--primary-color);
+  }
+}
