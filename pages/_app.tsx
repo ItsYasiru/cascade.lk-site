@@ -1,12 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 
-import {
-  BindToViewPort,
-  BTVP_BottomSection,
-} from "../components/app/BindToviewPort";
 import NavBar from "../components/app/NavBar";
 import Footer from "../components/app/Footer";
+import FixedContainer from "../components/utility/FixedContainer";
 
 import "../styles/_app.scss";
 
@@ -35,19 +32,26 @@ export default function App({ Component, pageProps }: AppProps) {
         className='artBox'
       />
 
-      <BindToViewPort>
+      <main>
         <Component {...pageProps} />
+      </main>
 
-        <BTVP_BottomSection>
-          <NavBar>
-            <Link href='/'>Home</Link>
-            <Link href='/contact'>Contact Us</Link>
-            <Link href='/services'>Services</Link>
-            <Link href='/projects'>Projects</Link>
-          </NavBar>
-          <Footer />
-        </BTVP_BottomSection>
-      </BindToViewPort>
+      <FixedContainer
+        style={{
+          left: 0,
+          bottom: 0,
+          width: "100vw",
+          background: "var(--primary-background-color)",
+        }}
+      >
+        <NavBar>
+          <Link href='/'>Home</Link>
+          <Link href='/contact'>Contact Us</Link>
+          <Link href='/services'>Services</Link>
+          <Link href='/projects'>Projects</Link>
+        </NavBar>
+        <Footer />
+      </FixedContainer>
     </>
   );
 }

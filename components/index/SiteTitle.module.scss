@@ -1,40 +1,98 @@
+@import "../../styles/variables";
+
 .main {
+  height: 100vh;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
 
   text-transform: capitalize;
 
   h1 {
+    position: relative;
+
     font-size: 120px;
     line-height: 110px;
     font-style: italic;
-    font-family: "Sigvar-Serial";
+    font-family: var(--font-secondary), var(--font-fallback);
+
+    span {
+      // display: none;
+      top: 50%;
+      width: 170px;
+      height: 2px;
+      z-index: 100;
+      position: absolute;
+
+      margin: 10px 0;
+
+      opacity: 0.5;
+      background-color: var(--primary-color);
+    }
+
+    label {
+      width: max-content;
+      right: 0;
+      bottom: -70px;
+      position: absolute;
+
+      margin: 0;
+      padding: 0;
+
+      font-size: 19px;
+      font-style: normal;
+      font-weight: 600;
+      font-family: var(--font-main), var(--font-fallback);
+      text-align: right;
+      text-transform: uppercase;
+      letter-spacing: 0.75px;
+    }
   }
+}
 
-  label {
-    width: 100%;
-    display: inline-block;
+@media screen and (max-width: $break_point-mobile) {
+  .main h1 {
+    font-size: 100px;
 
-    margin: 0;
-    padding: 0;
-
-    font-size: 19px;
-    font-weight: 600;
-    text-align: right;
-    text-transform: uppercase;
-    letter-spacing: 0.75px;
+    label {
+      bottom: -55px;
+      font-size: 15px;
+    }
   }
+}
 
-  span {
-    // display: none;
-    top: 50%;
-    width: 170px;
-    height: 2px;
-    z-index: 100;
-    position: absolute;
+.ScrollIndicator {
+  $size: 10px;
+  $bottomOffset: 30%;
 
-    margin: 10px 0;
+  width: $size;
+  height: $size;
+  bottom: $bottomOffset;
+  position: absolute;
 
-    opacity: 0.5;
-    background-color: var(--primary-color);
+  margin: 50px 0;
+  border: 2px solid var(--primary-color);
+  border-top: none;
+  border-left: none;
+
+  transform: rotate(45deg);
+  animation: moveUpDown 1.5s infinite;
+
+  @keyframes moveUpDown {
+    0% {
+      bottom: $bottomOffset;
+      opacity: 1;
+    }
+    50% {
+      bottom: calc($bottomOffset + ($size * 3));
+      opacity: 0;
+    }
+    100% {
+      bottom: $bottomOffset;
+      opacity: 1;
+    }
   }
 }
