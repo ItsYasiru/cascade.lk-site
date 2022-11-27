@@ -1,16 +1,5 @@
 @import "./variables";
-
-@font-face {
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-  font-family: "Sigvar-Serial";
-  src: url("../public/fonts/Sigvar-Serial-Bold.eot");
-  src: url("../public/fonts/Sigvar-Serial-Bold.eot") format("embedded-opentype"),
-    url("../public/fonts/Sigvar-Serial-Bold.woff2") format("woff2"),
-    url("../public/fonts/Sigvar-Serial-Bold.woff") format("woff"),
-    url("../public/fonts/Sigvar-Serial-Bold.ttf") format("truetype");
-}
+@import "./fonts";
 
 * {
   margin: 0;

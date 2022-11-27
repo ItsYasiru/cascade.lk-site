@@ -1,0 +1,43 @@
+@font-face {
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  font-family: "Sigvar-Serial";
+  src: url("../public/fonts/Sigvar-Serial-Bold.eot");
+  src: url("../public/fonts/Sigvar-Serial-Bold.eot") format("embedded-opentype"),
+    url("../public/fonts/Sigvar-Serial-Bold.woff2") format("woff2"),
+    url("../public/fonts/Sigvar-Serial-Bold.woff") format("woff"),
+    url("../public/fonts/Sigvar-Serial-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: normal;
+  src: local("../public/fonts/Segoe UI Regular"),
+    url("../public/fonts/Segoe-UI.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("../public/fonts/Segoe-UI-Italic"),
+    url("../public/fonts/Segoe-UI-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("../public/fonts/Segoe-UI-Bold"),
+    url("../public/fonts/Segoe-UI-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Segoe UI Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("../public/fonts/Segoe-UI-Bold-Italic"),
+    url("../public/fonts/Segoe-UI-Bold-Italic.woff") format("woff");
+}
