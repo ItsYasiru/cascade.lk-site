@@ -28,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
         }}
       />
       <div
+        data-bp-hide-tablet
         className='artBox'
         style={{ right: 0, bottom: 0, transform: "translate(50%, 50%)" }}
       />
