@@ -20,16 +20,16 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <div
+        className='artBox'
         style={{
           top: 0,
           left: 0,
           transform: "translate(-50%, -50%)",
         }}
-        className='artBox'
       />
       <div
-        style={{ right: 0, bottom: 0, transform: "translate(50%, 50%)" }}
         className='artBox'
+        style={{ right: 0, bottom: 0, transform: "translate(50%, 50%)" }}
       />
 
       <main>
@@ -40,6 +40,7 @@ export default function App({ Component, pageProps }: AppProps) {
         style={{
           left: 0,
           bottom: 0,
+          zIndex: 900,
           width: "100vw",
           background: "var(--primary-background-color)",
         }}

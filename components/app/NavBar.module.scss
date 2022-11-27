@@ -1,3 +1,5 @@
+@import "../../styles/variables";
+
 .main {
   bottom: 50px;
   width: 100%;
@@ -29,6 +31,15 @@
       &:first-child {
         border: none;
       }
+    }
+  }
+}
+
+@media screen and (max-width: $break_point-mobile) {
+  .main {
+    margin: 10px;
+    ol li {
+      font-size: 12px;
     }
   }
 }
